@@ -4,10 +4,10 @@ import { AddCategory } from './components/AddCategory'
 import { GifGrid } from './components/GifGrid'
 
 
-export const GifExpertApp = () => {
+export const GifExpertApp = ({defaultCategories=[]}) => {
     
-    const [categories, setCategory] = useState(["Shingeki"])
-   
+    const [categories, setCategory] = useState(defaultCategories)
+
     
     return (
         <>
@@ -21,7 +21,7 @@ export const GifExpertApp = () => {
                 <GifGrid
                 key={category} 
                 category={category}
-                 />
+                />
         ))
         }
         </ol>
